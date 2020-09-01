@@ -7,11 +7,9 @@ permalink: projects/aerosols
 # All dates must be YYYY-MM-DD format!
 date: 2018-08-01
 labels:
-  - Javascript
-  - Meteor
-  - MongoDB
-  - GitHub
-summary: A responsive web application for travel planning that my team developed in ICS 415.
+  - Arduino
+  - C++
+summary: Building a ground-based sensor to measure aerosol concentration.
 ---
 
 <img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
