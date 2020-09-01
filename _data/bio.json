@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Guanhong Li",
     "label": "Student",
-    "picture": "https://techfolios.github.io/template/images/molly.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2020.",
+    "picture": "https://guanhongl.github.io/images/1-min.jpg",
+    "email": "guanhong@hawaii.edu",
+    "phone": "808-729-8681",
+    "website": "https://guanhongl.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2023.",
     "location": {
       "address": "",
       "postalCode": "96822",
@@ -17,41 +17,29 @@
     "profiles": [
       {
         "network": "github",
-        "username": "mmaluhia",
-        "url": "http://github.com/changeme"
+        "username": "guanhongl",
+        "url": "http://github.com/guanhongl"
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
-      },
-      {
-        "network": "twitter",
-        "username": "mollymal",
-        "url": "http://twitter.com/changeme"
-      },
-      {
-        "network": "instagram",
-        "username": "molly",
-        "url": "http://instagram.com/changeme"
+        "username": "guanhong-li",
+        "url": "https://linkedin.com/in/guanhong-li-9847091b5/"
       }
     ]
   },
   "interests": [
     {
-      "name": "internet of things",
-      "keywords": [
-        "Arduino",
-        "TI MSP430"
-      ]
-    },
-    {
-      "name": "data mining",
+      "name": "software engineering",
       "keywords": [
       ]
     },
     {
-      "name": "artificial intelligence",
+      "name": "machine learning",
+      "keywords": [
+      ]
+    },
+    {
+      "name": "",
       "keywords": [
       ]
     }
