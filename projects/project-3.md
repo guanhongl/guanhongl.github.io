@@ -12,50 +12,13 @@ labels:
 summary: Teaching elementary school students STEM through science experiments.
 ---
 
-<img class="ui image" src="{{ site.baseurl }}/images/cotton-header.png">
+<img class="ui image" src="{{ site.baseurl }}/images/sles1.jpg">
 
-Cotton is a horror-esque text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+Towards the end of my senior year at Moanalua High School, my STEM capstone class organized a STEM day for Salt Lake Elementary School's fourth grade class. My classmates and I planned and conducted a series of science experiments with the purpose of introducing the kids to STEM. The science experiments were: alka seltzer lava lamps, composting with earthworms, and baking soda powered boats. Our class split into three teams, each responsible for an experiment, and took turns leading each classroom. The students were given a short demonstration, then did the experiments themselves with our guidance. It was an opportunity to become teachers for a day and help fourth graders grasp a basic understanding of science. 
 
-To give you a flavor of the game, here is an excerpt from one run:
+<img class="ui image" src="{{ site.baseurl }}/images/sles2.jpg">
 
-<hr>
+I lead the alka seltzer lava lamps team by coordinating and communicating how the experiment was to be carried out. This experiment involved creating a lava lamp using a plastic bottle as a base and water, oil, and alka seltzer. I created a schedule for our team so we could conduct our teaching in a timely and organized fashion. For the experiment, I highlighted concepts we should focus on such as basic chemical reactions and condensed them in a way fourth graders could understand. I made sure everyone on my team understood the concepts and methodology. For example, how much alka seltzer should we use.
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+The event strengthened my leadership skills significantly. I aspire to become a leader in the STEM field. Teaching these talented individuals helped my realize this goal. I learned how being passionate translates to good leadership; if you hope to lead, you must first love what you are leading. The event also taught me how to become creative and flexible when teaching. 
 
