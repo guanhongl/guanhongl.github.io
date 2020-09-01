@@ -7,9 +7,9 @@ permalink: projects/sles
 # All dates must be YYYY-MM-DD format!
 date: 2019-05-14
 labels:
-  - Lisp
-  - GitHub
-summary: A text adventure game I developed for ICS 313.
+  - Community Event
+  - STEM
+summary: Teaching elementary school students STEM through science experiments.
 ---
 
 <img class="ui image" src="{{ site.baseurl }}/images/cotton-header.png">
