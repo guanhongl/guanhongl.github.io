@@ -1,11 +1,11 @@
 ---
 layout: project
 type: project
-image: images/vacay-square.png
-title: Vacay
-permalink: projects/vacay
+image: images/stem.png
+title: Atmospheric Aerosols
+permalink: projects/aerosols
 # All dates must be YYYY-MM-DD format!
-date: 2015-12-15
+date: 2018-08-01
 labels:
   - Javascript
   - Meteor
