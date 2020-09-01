@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/sles.jpg
+image: images/sles.png
 title: SLES x STEM
 permalink: projects/sles
 # All dates must be YYYY-MM-DD format!
