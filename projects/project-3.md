@@ -1,11 +1,11 @@
 ---
 layout: project
 type: project
-image: images/cotton-square.png
-title: Cotton
-permalink: projects/cotton
+image: images/sles.jpg
+title: SLES x STEM
+permalink: projects/sles
 # All dates must be YYYY-MM-DD format!
-date: 2014-04-12
+date: 2019-05-14
 labels:
   - Lisp
   - GitHub
