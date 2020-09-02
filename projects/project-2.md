@@ -15,7 +15,7 @@ summary: Building a ground-based sensor to measure aerosol concentration.
 
 <img class="ui medium right floated rounded image" src="../images/circuit.jpg">
 
-<img class="ui medium left floated rounded image" src="../images/box.jpg">
+<img class="ui large left floated rounded image" src="../images/box.jpg">
 
 A defining portion of my STEM capstone class was the capstone project: a chosen project that provided students with an opportunity to demonstrate their learning in a certain field.
 
