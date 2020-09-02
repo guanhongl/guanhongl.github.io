@@ -7,38 +7,26 @@ permalink: projects/lzjd
 # All dates must be YYYY-MM-DD format!
 date: 2020-06-01
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+  - golang
+  - Biology
+  - Set Math
+summary: My team extended the Lempel-Ziv Jaccard distance and applied it to biology.
 ---
 
-<div class="ui small rounded images">
-  <img class="ui image" src="../images/micromouse-robot.png">
-  <img class="ui image" src="../images/micromouse-robot-2.jpg">
-  <img class="ui image" src="../images/micromouse.jpg">
-  <img class="ui image" src="../images/micromouse-circuit.png">
-</div>
+Over the summer, I worked with a research team comprised of 3 undergraduates, 2 graduates, and my Calculus professor. One of our research topics was of the Lempel-Ziv Jaccard distance (LZJD): the measurement of the similarity between two sets. We applied the LZJD and other variations of it to genome and protein sequences to see if it was efficient as an alignment-free sequence comparison method. Also, we extended the LZJD to multiple sets. Research involved using golang implementations of various LZJD calculators to calculate distances between genomes. We presented our findings at the 2020 SURE symposium.
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+For this research project, I mainly worked on implementing the various distance calculators in golang. I started by implementing a simplified version of the LZJD; the function generates a simplified LZ dictionary and the JD calculates the distance between two dictionaries. I utilized maps in golang to significantly decrease the runtime of the function when called on genome sequences. Next, I implemented Otu-Sayood distance calculators based on LZ complexity. I used R to generate phylogenetic trees from the distance matrices of some genomes. Unfortunately, the generated phylogenetic trees were not too accurate meaning the LZJD may not be best for comparing genome sequences. 
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+I experienced being in a college-level research team. It was a great opportunity to apply my classroom knowledge outside of class. Working alongside graduates and a professor broadened my professional scope. I learned valuable communication and teamwork skills. Also, it was interesting to see how different majors could be integrated into a research project (math, biology, and CS).  
 
-Here is some code that illustrates how we read values from the line sensors:
+Here is some code that illustrates how maps were utilized:
 
 ```js
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
+_, exists := wordMap[word] 
+			if !exists { //if word is not in wordMap
+				wordMap[word] = struct{}{} //add word to wordMap
+				myDict = append(myDict, word) //add word to dictionary
+				i += len(word) - 1 //set i to end of word
+				break
+			}
 ```
-
-You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
-
-
-
