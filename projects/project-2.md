@@ -9,12 +9,15 @@ date: 2018-08-01
 labels:
   - Arduino
   - C++
+  - 3D Printing
 summary: Building a ground-based sensor to measure aerosol concentration.
 ---
 
-<img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
+<img class="ui medium right floated rounded image" src="../images/circuit.jpg">
 
-Vacay is a web application that I helped create as a team project in ICS 415, Spring 2015. The project helped me learn how to design and implement a responsive web site.
+<img class="ui medium left floated rounded image" src="../images/box.jpg">
+
+A defining portion of my STEM capstone class was the capstone project: a chosen project that provided students with an opportunity to demonstrate their learning in a certain field.
 
 Vacay is implemented using [Meteor](http://meteor.com), a JavaScript application platform. Within two weeks, we created a website that implements several types of reservations including flights, hotels, and car rentals.
 
