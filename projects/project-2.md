@@ -17,6 +17,7 @@ summary: Building a ground-based sensor to measure aerosol concentration.
 
 A defining portion of my STEM capstone class was the capstone project: a chosen project that students would work on all year long with the guidance of a mentor. My partner, Elton, and I along with our mentor, Daryl, chose to engineer and modify an inexpensive air particle sensor. It consisted of linking parts to an Arduino board, programming the sensor to periodically record data, and 3D printing new design elements. We tested our instrument by stationing it around different residential areas on Oahu where it collected aerosol concentration, and compared it to EPA data. We presented our project locally at our Moanalua High School's science fair and the district science fair.
 
+
 <img class="ui image" src="../images/box.jpg">
 
 I researched ways to modify and improve the air particle sensor. Some improvements I identified were replacing the heat resistor with an exhaust fan and 3D printing a case to house the sensor from outside variables. I mainly worked on the structure of the instrument such as managing the circuitry on the Arduino board and neatly assembling the parts within the 3D printed case. Although our mentor did most of the programming in Arduino, I made sure I could understand the code. With the gathered data, I analyzed trends and discussed them in our research paper. 
