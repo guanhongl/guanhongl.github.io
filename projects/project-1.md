@@ -21,7 +21,7 @@ I experienced being in a college-level research team. It was a great opportunity
 
 Here is some code that illustrates how maps were utilized:
 
-```js
+```golang
 _, exists := wordMap[word] 
 			if !exists { //if word is not in wordMap
 				wordMap[word] = struct{}{} //add word to wordMap
