@@ -13,7 +13,7 @@ labels:
 summary: My team extended the Lempel-Ziv Jaccard distance and applied it to biology.
 ---
 
-<img class="ui image" src="../images/lzjd.jpg">
+<img class="ui medium right floated rounded image" src="../images/lzjd.jpg">
 
 Over the summer, I worked with a research team comprised of 3 undergraduates, 2 graduates, and my Calculus professor. One of our research topics was of the Lempel-Ziv Jaccard distance (LZJD): the measurement of the similarity between two sets. We applied the LZJD and other variations of it to genome and protein sequences to see if it was efficient as an alignment-free sequence comparison method. Also, we extended the LZJD to multiple sets. Research involved using golang implementations of various LZJD calculators to calculate distances between genomes. We presented our findings at the 2020 SURE symposium.
 
