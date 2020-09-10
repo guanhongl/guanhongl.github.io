@@ -14,11 +14,11 @@ In an ever developing era of technology, the amount of information and knowledge
 
 ## Smart vs Dumb
 
-<img class="ui small right floated rounded image" src="../images/smart.JPG">
+<img class="ui medium right floated rounded image" src="../images/smart.JPG">
 
 [Smart questions](https://stackoverflow.com/questions/21350478/what-does-memory-allocated-at-compile-time-really-mean) start with refined subject headers. A well-thought and concise header attracts readers and provides them with the main point of your question. The header here clearly asks about memory allocation at compile time. Next, smart questions should provide background and show proof of individual research. The user opens with background information about static and dynamic memory allocation. They then demonstrate their understanding so far based on what research they’ve done. This also displays their desire to understand and not just for the answer. In return for asking a smart question, the user receives a well-constructed answer: they clearly explain what memory allocation at compile time is and provide detailed examples. 
 
-<img class="ui small right floated rounded image" src="../images/dumb.JPG">
+<img class="ui medium right floated rounded image" src="../images/dumb.JPG">
 
 [This question](https://stackoverflow.com/questions/34049463/scanf-is-not-working-in-c), however, demonstrates a lack of intelligence. The first thing one may notice is the uninspiring header, “Scanf is not working in C”. Vague questions like these leave the reader asking more questions and are often time sinks. The user pastes some lines of code that they expect others to analyze. They provide no other useful information and contribute nothing to the problem-solving process. Also, they lazily exhibit a lack of research as this is a common C question that can easily be Googled. The user clearly desires the answer rather than understanding. As a result, they are given short answers that state the property of scanf(), pulled directly from the manual.
 
