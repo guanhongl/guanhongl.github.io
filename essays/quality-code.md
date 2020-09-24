@@ -19,4 +19,4 @@ Being organized is one of the key principles I abide by. I will gladly apply cod
 ## What Do The Squiggles Mean?
 Using ESLint with IntelliJ feels like grammar checking my code. It informs me whether my code is structured neatly, if I'm using the right assignments, or if I have unnecessary lines. I'm not annoyed at the sight of a red squiggle, rather I feel somewhat relieved; it points me to my errors and helps me fix them. The green checkmark at the end reassures me that my code is of acceptable quality. Using the AirBnB style guide, I have developed good practices in coding. For example, I have started using 'const' which lets me and others know that the variable won't be reassigned. Coding standards aren't meant to punish you, they are meant to help you understand functionality in code and enforce good practices. I hope by following these standards I can ensure my programs feel professional. Developing these standards now will make me an effective contributor in future workspaces.
 
-<img class="ui centered large image" src="../images/goto.png">
+<img class="ui centered huge image" src="../images/goto.png">
