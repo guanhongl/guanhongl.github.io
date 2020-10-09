@@ -25,7 +25,9 @@ UI frameworks are a set of tools that help you do just that! Semantic UI, for ex
 ## Invest Today
 In return for the investment of time and frustration, tools from UI frameworks can heavily style your page without the excessive need for HTML and CSS. A few drops of Semantic UI transformed my previous Browser History page into one that's more coherent and appealing. There's boundlessly more options to explore with Semantic UI. For software engineers, UI frameworks may be a gateway into higher level web development. Also, I believe if people devoted time to creating these libraries and tool sets, you might as well utilize them! 
 
-<div class="ui large images">
+<div class="ui medium images">
   <img src="../images/tf_orig.jpg">
   <img src="../images/tf_me.jpg">
 </div>
+
+*[teddyfresh.com](teddyfresh.com) vs a Semantic UI remake*
