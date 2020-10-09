@@ -20,9 +20,12 @@ You'll notice it's unlike any other mainstream website, and not in a good way. T
 ## Introducing... Semantic UI
 UI frameworks are a set of tools that help you do just that! Semantic UI, for example, is an exceptional tool that assists in styling your webpage. After watching a 3 hour tutorial, Semantic UI felt daunting. Those 3 hours were crammed with new terminology and elements; I felt I hadn't retained much information. However, tackling ui classes bit by bit developed my understanding and appreciation of Semantic UI. It emphasizes simplicity in styling websites, especially through adjectives. If I wanted a top menu with an inverted color scheme and four equally divided items, I would simply write ````<div class="ui fixed top inverted four item menu">````. Ask and you shall receive in Semantic UI. 
 
-Semantic Browser History img
+<img class="ui fluid image" src="../images/bh_new.jpg">
 
 ## Invest Today
 In return for the investment of time and frustration, tools from UI frameworks can heavily style your page without the excessive need for HTML and CSS. A few drops of Semantic UI transformed my previous Browser History page into one that's more coherent and appealing. There's boundlessly more options to explore with Semantic UI. For software engineers, UI frameworks may be a gateway into higher level web development. Also, I believe if people devoted time to creating these libraries and tool sets, you might as well utilize them! 
 
-Teddy Fresh img
+<div class="ui large images">
+  <img src="../images/tf_orig.jpg">
+  <img src="../images/tf_me.jpg">
+</div>
