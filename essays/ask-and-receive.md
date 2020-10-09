@@ -30,4 +30,4 @@ In return for the investment of time and frustration, tools from UI frameworks c
   <img src="../images/tf_me.jpg">
 </div>
 
-*[teddyfresh.com](teddyfresh.com) vs a Semantic UI remake*
+*[teddyfresh.com](https://teddyfresh.com/) vs a Semantic UI remake*
