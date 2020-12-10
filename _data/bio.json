@@ -53,7 +53,12 @@
         "C++",
         "Java",
         "Javascript",
-        "Go"
+        "Go",
+        "HTML/CSS",
+        "Meteor",
+        "React",
+        "Semantic UI",
+        "MongoDB"
       ]
     },
     {
@@ -62,8 +67,10 @@
       "keywords": [
         "Unix",
         "Vi",
-        "Windows",
-        "g++"
+        "WindowsOS",
+        "g++",
+        "GitHub",
+        "InteliJ IDEA"
       ]
     }
   ],
@@ -104,13 +111,27 @@
       ]
     },
     {
+      "company": "Fisher Hawaii",
+      "position": "Stock Clerk",
+      "website": "",
+      "startDate": "2019-7-00",
+      "endDate": "2019-8-00",
+      "summary": "",
+      "highlights": [
+        "Customer assistance",
+        "Stocked and organized aisles"
+      ]
+    },
+    {
       "company": "Hawaii State Library",
       "position": "Student Helper",
       "website": "",
       "startDate": "2018-03-00",
       "endDate": "2019-03-00",
-      "summary": "Maintained order in the Social Science and Philosophy section by reshelving, finding, processing, and mending books and organizing shelves.",
+      "summary": "",
       "highlights": [
+        "Customer assistance",
+        "Handled books"
       ]
     }
   ],
