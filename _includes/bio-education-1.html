@@ -12,7 +12,10 @@
   <div class="ui grid">
     <div class="twelve wide column no-bottom">
       <p class="ui no-bottom"><b>{{ entry.institution }}</b></p>
-      <p class="ui no-bottom">{{ entry.studyType }}, {{ entry.area }}, GPA: {{ entry.gpa }}</p>
+      {% if entry.studyType %}
+      <p class="ui no-bottom">{{ entry.studyType }}, {{ entry.area }}</p>
+      {% endif %}
+      <p class="ui no-bottom">GPA: {{ entry.gpa }}</p>
       {% if entry.courses %}
       <ul style="margin: 0px;">
         {% for course in entry.courses %}
