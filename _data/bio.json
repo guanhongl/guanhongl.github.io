@@ -81,7 +81,17 @@
       "studyType": "B.S.",
       "startDate": "2019-08-26",
       "endDate": "Present",
-      "gpa": "3.90",
+      "gpa": "3.93",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "Moanalua High School, Honolulu, HI",
+      "area": "",
+      "studyType": "",
+      "startDate": "2015-08-00",
+      "endDate": "2019-05-00",
+      "gpa": "4.14",
       "courses": [
       ]
     }
