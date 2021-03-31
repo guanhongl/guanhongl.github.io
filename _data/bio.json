@@ -103,7 +103,7 @@
       "website": "",
       "startDate": "2020-06-00",
       "endDate": "2020-08-00",
-      "summary": "Assisted in the research of mathematical distances, mainly through programming",
+      "summary": "Assisted in the research of Lempel Ziv Jaccard distance and its possible applications to phylogeny, mainly through programming in Go",
       "highlights": [
       ]
     },
