@@ -1,113 +1,122 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "name": "Steven Li",
+    "label": "Software Developer",
+    "picture": "https://github.com/guanhongl.png",
+    "email": "guanhong@hawaii.edu",
+    "phone": "808-729-8681",
+    "website": "https://guanhongl.github.io",
+    "summary": "I am a recent graduate of the University of Hawaii with a B.S. in Computer Science. I offer 2+ years of experience in software development in the end user space and excellent adaptive, collaborative, and technical skills.",
+    "location": { "address": "", "postalCode": "94116", "city": "San Francisco", "countryCode": "USA", "region": "California" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "guanhongl", "url": "https://github.com/guanhongl" },
+      { "network": "linkedin", "username": "guanhongl", "url": "https://linkedin.com/in/guanhongl" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Software Engineering" },
+    { "name": "Machine Learning" },
+    { "name": "Cloud Computing" }
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "name": "Languages",
+      "keywords": [ "JavaScript", "TypeScript", "HTML/CSS", "Java", "Python" ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "name": "Frameworks & Databases",
+      "keywords": [ "React", "NodeJS", "T-SQL", "MongoDB" ]
+    },
+    {
+      "name": "Tools",
+      "keywords": [ "Git", "Docker", "AWS (Amplify, API Gateway, Lambda, S3)" ]
     }
   ],
   "education": [
     {
       "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "area": "Computer Science; GPA: 3.97; Summa Cum Laude",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "startDate": "2019-08-01",
+      "endDate": "2022-12-01",
       "courses": [
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
+      "company": "State of Hawaii Department of Taxation",
+      "position": "System Programmer",
+      "website": "https://hitax.hawaii.gov/",
+      "startDate": "2023-01-01",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Created a proprietary JavaScript solution of fillable tax forms with Adobe Acrobat APIs to automate data entry.",
+        "Leading the redesign of the home page; revamped for responsiveness, accessibility, and SEO improving user friendliness and site performance.",
+        "Translating business questions into use cases with emphasis on KPI, report, and ad hoc needs with T-SQL.",
+        "Collaborating with business analysts to design and implement unit tests and E2E tests."
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "University of Hawaii System",
+      "position": "Front End Developer",
+      "website": "https://www.star.hawaii.edu/help/",
+      "startDate": "2021-06-01",
+      "endDate": "2022-06-01",
       "summary": "",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Developed a self service portal for faculty to configure university systems to business needs for 50,000+ users across 10 campuses, resulting in improvements in time and accuracy.",
+        "Built modular, scalable front end architecture for university systems consisting of reusable, maintainable components with React and Redux.",
+        "Collaborated with database developers to architect REST API support for CRUD applications with Java.",
+        "Discussed solutions and alternatives with business to resolve core features and current issues."
+      ]
+    },
+    {
+      "company": "Decision Research Corporation",
+      "position": "Research Assistant",
+      "website": "",
+      "startDate": "2020-06-01",
+      "endDate": "2020-08-01",
+      "summary": "",
+      "highlights": [
+        "Implemented a new high performance bioinformatic distance to measure the similarity between CoViD-19 and other viruses for phylogeny in Go.",
+        "Pulled data from the NCBI genome database to generate informative, compelling visualizations of the distances between CoViD-19 mutations in Go and R."
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
+      "organization": "Clinic Inventory Management System",
+      "website": "https://sites.google.com/view/hawaiihomeproject/about",
       "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
       "startDate": "",
       "endDate": "",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Led the transition to an autonomous practice by developing an electronic inventory management system and a faster, safer, and more accurate business system with React and MongoDB.",
+        "Coordinated with an EHR vendor to design and implement a data pipeline to nightly sync 1,000+ patient records to update the database; integrated with Athenahealth APIs."
+      ]
+    },
+    {
+      "organization": "Marine Aircraft Maintenance AI Chatbot",
+      "website": "",
+      "position": "Software Developer",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Designed and developed a chatbot app to automate aircraft maintenance actions with Python and NLP; improved accuracy by 30% and the user experience. Packaged as a scalable, containerized product with Docker.",
+        "Extracted and cleansed millions of maintenance records to construct a pipeline for data analysis and a thin API layer for serving data with Flask and Redis."
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
-    },
-    {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Provost Achievement Scholarship",
+      "date": "2019",
+      "awarder": "University of Hawaii",
+      "summary": "Awarded to 1 of 80 outstanding, high-achieving graduates who complete a rigorous curriculum with a minimum overall GPA of 3.8."
     }
   ],
   "references": [
