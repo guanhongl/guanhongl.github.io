@@ -67,4 +67,8 @@ I learned to adapt my solution to the client's request. Understanding the client
 
 ## More on Meteor
 
+Minerva was my deep dive into the Meteor framework. An aspect of Meteor I found brilliant was it does not use the request response cycle for client server interaction! Instead, on client connection a Minimongo instance is created; Minimongo is an in-memory, in-browser implementation of Mongo. Then, the Distributed Data Protocol (DDP) propagates data changes between the server and client databases. 
 
+- Minimongo serves as a local cache that stores a subset of the database, saving server round trips and providing real-time UX
+- The server publishes subsets of the database and the client subscribes to subsets of the database, defining what data changes to propagate
+- DDP is the transport
