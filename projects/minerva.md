@@ -11,6 +11,7 @@ labels:
   - React
   - MongoDB
 summary: "An electronic inventory management system for a nonprofit clinic."
+sortKey: 1
 ---
 
 <img class="img-fluid" src="../img/minerva/minerva-home-page.png">

@@ -12,5 +12,6 @@ labels:
   - Cluster Computing
 summary: "Greatly increasing the lower bounds for supersolvable group orders via multi-threading and cluster computing."
 projecturl: img/supersolvable/supersolvable-paper.pdf
+sortKey: 3
 ---
 

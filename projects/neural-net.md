@@ -9,5 +9,6 @@ labels:
   - Machine Learning
   - Numpy
 summary: "Implementing an artificial neural network without modern machine learning packages. Tests on the Fashion MNIST dataset."
+sortKey: 5
 ---
 

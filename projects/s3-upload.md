@@ -12,5 +12,6 @@ labels:
   - TypeScript
   - Passport
 summary: "A cloud storage app that persists files to Amazon S3 with Google OAuth authentication."
+sortKey: 2
 ---
 
