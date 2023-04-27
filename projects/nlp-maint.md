@@ -64,6 +64,16 @@ My team developed a proof of concept demonstrating the feasibility of the pre-tr
 - Engineers do not have to traverse the complex WUC tree system, mitigating the barrier to entry
 - Data accuracy improves the supply chain as a whole
 
+Currently, the correct WUC is predicted in a list of 8 predictions 80% of the time (Recall = 0.80). 
+
 ## Containerized Development
 
-`docker-compose.yml`
+Docker packages software into standardized units called containers that contain code, libraries, runtime, everything the software needs to run! Building the chatbot app manually was tedious considering the many Python libraries, tools, and frameworks. With containers, my teammates did not have to build the app on their machines manually; they could build and test the app quickly with three commands:
+
+```
+docker build -f Dockerfile.api -t nlp-api .
+docker build -f Dockerfile.client -t nlp-client .
+docker-compose up
+```
+
+Futhermore, containerized apps can be quickly deployed and scaled on cloud services such as Azure and AWS. 
