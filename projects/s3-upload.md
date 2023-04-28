@@ -101,17 +101,11 @@ I use [Passport.js](https://www.passportjs.org/) with Express to integrate Googl
 
 ## Amazon's Object Storage Service
 
-```js
-// client
-const res = await fetch("http://localhost:5000/files", {
-    method: "POST",
-    body: formData,
-    credentials: "include",
-    headers: {
-        "Content-Type": "multipart/form-data",
-    },
-})
-```
+Amazon S3 (Simple Storage Service) is a cloud-based object storage service that allows users to store and retrieve data from anywhere on the web. It provides scalable, secure, and highly available storage infrastructure for a variety of use cases. I integrate S3 for uploading, downloading, and deleting files on the app without worrying about the underlying infrastructure. 
+
+Configuring and creating an S3 bucket is surprisingly simple. I use [AWS SDK](https://aws.amazon.com/sdk-for-javascript/) to call AWS services using JavaScript APIs on my Node app. The app must obtain my AWS account credentials before it can access services through the API. In development, AWS SDK automatically loads these credentials from my shared credentials file on `C:\Users\USER_NAME\.aws\credentials`! In production, you would likely load your credentials from environment variables. Then I simply created an S3 bucket in my AWS Management Console. 
+
+To access services through the JavaScript API, I first created an S3 service object through which I access a set of features provided by the underlying client class. Then, I set up the RESTful API endpoints for uploading, downloading, and deleting with Express. Here is an example of the upload endpoint. I specify the `Bucket`, `Key` the object key, and the `Body` the object data or file buffer in our case in the POST endpoint. 
 
 ```js
 // server
@@ -127,4 +121,16 @@ app.post("/files",
   
   ...
 )
+```
+
+```js
+// client
+const res = await fetch("http://localhost:5000/files", {
+    method: "POST",
+    body: formData,
+    credentials: "include",
+    headers: {
+        "Content-Type": "multipart/form-data",
+    },
+})
 ```
