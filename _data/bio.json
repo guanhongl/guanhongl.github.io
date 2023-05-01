@@ -107,7 +107,7 @@
       "summary": "",
       "highlights": [
         "Designed and developed a chatbot app to automate aircraft maintenance actions with Python and NLP; improved accuracy by 30% and the user experience. Packaged as a scalable, containerized product with Docker.",
-        "Extracted and cleansed millions of maintenance records to construct a pipeline for data analysis and a thin API layer for serving data with Flask and Redis."
+        "Extracted and cleansed millions of maintenance records to construct a custom classifier and a thin API layer for serving data with Flask and Redis."
       ]
     }
   ],

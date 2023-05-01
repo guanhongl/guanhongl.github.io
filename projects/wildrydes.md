@@ -12,7 +12,7 @@ labels:
   - Lambda
   - DynamoDB
 summary: "A serverless web app that enables users to request unicorn rides."
-sortKey: 4
+sortKey: 3
 ---
 
 <img class="img-fluid" src="../img/wildrydes/wildrydes-home-page.png">

@@ -39,7 +39,7 @@ The proposed solution was to train a model on historical data to predict possibl
 
 #### Meaningful Representations of Words
 
-Machines cannot understand or process words, and so we need to meaningfully encode words into numbers. A naive approach is with [one-hot vectors](https://en.wikipedia.org/wiki/One-hot#Natural_language_processing), but a better approach to represent word relationships is with [word embeddings](https://en.wikipedia.org/wiki/Word_embedding). Words are encoded as real-valued vectors in such a way that words similar in meaning are closer in vector space! An in short, they are generated using neural networks. 
+Machines cannot understand or process words, and so we need to meaningfully encode words into numbers. A naive approach is with [one-hot vectors](https://en.wikipedia.org/wiki/One-hot#Natural_language_processing), but a better approach to represent word relationships is with [word embeddings](https://en.wikipedia.org/wiki/Word_embedding). Words are encoded as real-valued vectors in such a way that words similar in meaning are closer in vector space! And in short, they are generated using neural networks. 
 
 I chose Facebook's [fastText](https://fasttext.cc/) package for word embeddings. As the name implied, it was fast for training. But also, it learned character level information through character n-grams. This improved on rare words and misspelled words which we encountered many of in the historical data. 
 

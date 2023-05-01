@@ -25,7 +25,7 @@ AWS S3 Upload is a cloud storage app that provides users a secure method to stor
 
 ## OAuth at a Glance
 
-OAuth, or Open Authorization, is a secure approach to authenticate users inside an app via third-party services such as Google and Facebook. In the app, the user is redirected to a Google authorization server upon login and prompted with a consent screen asking to grant access to their Google profile info to the app for login. If allows, then the user is logged into the app via their Google credentials; these credentials can be expired or revoked by the user. The key is: no passwords are stored or shared! 
+OAuth, or Open Authorization, is a secure approach to authenticate users inside an app via third-party services such as Google and Facebook. In the app, the user is redirected to a Google authorization server upon login and prompted with a consent screen asking to grant access to their Google profile info to the app for login. If allowed, then the user is logged into the app via their Google credentials; these credentials can be expired or revoked by the user. The key is: no passwords are stored or shared! 
 
 <div class="container text-center">
   <div class="row">
