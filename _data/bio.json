@@ -25,11 +25,11 @@
     },
     {
       "name": "Frameworks & Databases",
-      "keywords": [ "React", "NodeJS", "T-SQL", "MongoDB" ]
+      "keywords": [ "React", "NodeJS", "Express", "T-SQL", "MongoDB" ]
     },
     {
       "name": "Tools",
-      "keywords": [ "Git", "Docker", "AWS (Amplify, API Gateway, Lambda, S3)" ]
+      "keywords": [ "Git", "Docker", "AWS (Amplify, Lambda, DynamoDB, S3)" ]
     }
   ],
   "education": [
@@ -53,9 +53,9 @@
       "summary": "",
       "highlights": [
         "Created a proprietary JavaScript solution of fillable tax forms with Adobe Acrobat APIs to automate data entry.",
-        "Leading the redesign of the home page; revamped for responsiveness, accessibility, and SEO improving user friendliness and site performance.",
-        "Translating business questions into use cases with emphasis on KPI, report, and ad hoc needs with T-SQL.",
-        "Collaborating with business analysts to design and implement unit tests and E2E tests."
+        "Led the redesign of the home page; revamped for responsiveness, accessibility, and SEO improving user friendliness and site performance.",
+        "Translated business questions into use cases with emphasis on KPI, report, and ad hoc needs with T-SQL.",
+        "Collaborated with business analysts to design and implement unit tests and E2E tests."
       ]
     },
     {
@@ -94,7 +94,7 @@
       "endDate": "",
       "summary": "",
       "highlights": [
-        "Led the transition to an autonomous practice by developing an electronic inventory management system and a faster, safer, and more accurate business system with React and MongoDB.",
+        "Led the transition to an autonomous practice by developing an electronic inventory management system and a faster, safer, and more accurate business system with Meteor, MongoDB, and React.",
         "Coordinated with an EHR vendor to design and implement a data pipeline to nightly sync 1,000+ patient records to update the database; integrated with Athenahealth APIs."
       ]
     },
