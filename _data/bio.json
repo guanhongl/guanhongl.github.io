@@ -49,9 +49,10 @@
       "position": "System Programmer",
       "website": "https://hitax.hawaii.gov/",
       "startDate": "2023-01-01",
-      "endDate": "Present",
+      "endDate": "2023-03-01",
       "summary": "",
       "highlights": [
+        "Implemented and configured tax software solutions to meet Hawaii's needs, streamline day-to-day business processes, and better service 750,000 taxpayers in .NET and T-SQL.",
         "Created a proprietary JavaScript solution of fillable tax forms with Adobe Acrobat APIs to automate data entry.",
         "Led the redesign of the home page; revamped for responsiveness, accessibility, and SEO improving user friendliness and site performance.",
         "Translated business questions into use cases with emphasis on KPI, report, and ad hoc needs with T-SQL.",
