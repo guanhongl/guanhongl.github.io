@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2F8YN01J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NC2F8YN01J');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="AWS S3 Upload | Steven Li | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/guanhongl.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steven Li | Professional Portfolio">
+    <meta property="og:url" content="https://guanhongl.github.io/projects/s3-upload.html">
+    <meta property="og:title" content="AWS S3 Upload | Steven Li | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/guanhongl.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>AWS S3 Upload | Steven Li | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Steven Li</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">AWS S3 Upload</h1>
+ <p><img class="img-fluid" src="../img/s3-upload/s3-upload-home-page.png" /></p>
+
+<p><a href="https://github.com/guanhongl/s3-upload-google-auth">Visit GitHub Repo</a></p>
+
+<h2 id="a-cloud-storage-app">A Cloud Storage App</h2>
+
+<p>AWS S3 Upload is a cloud storage app that provides users a secure method to store and access their files on the cloud. I built this app to “clone” Google Drive and to practice cloud computing. App features include uploading, downloading, and deleting files on Amazon S3 via a simple user interface. Moreover, the app uses Google OAuth authentication to protect user data; users must login with a Google account to access their files. The app is built on the MERN Stack, or MongoDB, Express, React, and Node.</p>
+
+<h2 id="oauth-at-a-glance">OAuth at a Glance</h2>
+
+<p>OAuth, or Open Authorization, is a secure approach to authenticate users inside an app via third-party services such as Google and Facebook. In the app, the user is redirected to a Google authorization server upon login and prompted with a consent screen asking to grant access to their Google profile info to the app for login. If allowed, then the user is logged into the app via their Google credentials; these credentials can be expired or revoked by the user. The key is: no passwords are stored or shared!</p>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img src="../img/s3-upload/s3-upload-login-page.png" class="img-fluid" />
+    </div>
+    <div class="col">
+      <img src="../img/s3-upload/s3-upload-google-oauth.png" class="img-fluid" />
+    </div>
+  </div>
+</div>
+
+<h2 id="oauth-the-big-picture">OAuth the BIG Picture</h2>
+
+<p>I use <a href="https://www.passportjs.org/">Passport.js</a> with Express to integrate Google OAuth. Let’s dive into the OAuth flow. <em>I use Express to build the app’s RESTful API endpoints. These endpoints are essentially a series of middleware function calls, or functions that can make changes to the request and response objects and call the next middleware function in the req-res cycle. Passport uses such middleware.</em></p>
+
+<ol>
+  <li>
+    <p>The login button routes users to <code class="language-plaintext highlighter-rouge">/auth/google</code>. Passport then routes users to a Google auth server and requests their profile info, defined by <code class="language-plaintext highlighter-rouge">scope</code>, on the consent screen.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+     <span class="dl">"</span><span class="s2">/auth/google</span><span class="dl">"</span><span class="p">,</span> 
+     <span class="nx">passport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(</span><span class="dl">"</span><span class="s2">google</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">scope</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">profile</span><span class="dl">"</span><span class="p">]</span> <span class="p">}),</span>
+ <span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>If users grant the app permission, then they are redirected to the <code class="language-plaintext highlighter-rouge">callbackURL</code> with the <code class="language-plaintext highlighter-rouge">code</code> query parameter. <em>Before using Google OAuth, you must register the app with Google to obtain the <code class="language-plaintext highlighter-rouge">clientID</code> and <code class="language-plaintext highlighter-rouge">clientSecret</code> which need to be provided to the Passport strategy</em>.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">passport</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="k">new</span> <span class="nx">GoogleStrategy</span><span class="p">({</span>
+         <span class="na">clientID</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GOOGLE_CLIENT_ID</span> <span class="k">as</span> <span class="nx">string</span><span class="p">,</span>
+         <span class="na">clientSecret</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GOOGLE_CLIENT_SECRET</span> <span class="k">as</span> <span class="nx">string</span><span class="p">,</span>
+         <span class="na">callbackURL</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://localhost:5000/auth/google/callback</span><span class="dl">"</span><span class="p">,</span>
+     <span class="p">},</span>
+     <span class="kd">function</span><span class="p">(</span><span class="nx">accessToken</span><span class="p">,</span> <span class="nx">refreshToken</span><span class="p">,</span> <span class="nx">profile</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">profile</span><span class="p">)</span>
+     <span class="p">}</span>
+ <span class="p">))</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Passport routes to a Google auth server once more to exchange the <code class="language-plaintext highlighter-rouge">code</code> for users’ profile info. Once the app receives users’ <code class="language-plaintext highlighter-rouge">profile</code>, the <code class="language-plaintext highlighter-rouge">callback</code> function fires to add <code class="language-plaintext highlighter-rouge">profile</code> to the request object and call the next middleware function.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">app</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+     <span class="dl">"</span><span class="s2">/auth/google/callback</span><span class="dl">"</span><span class="p">,</span> 
+     <span class="nx">passport</span><span class="p">.</span><span class="nx">authenticate</span><span class="p">(</span><span class="dl">"</span><span class="s2">google</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">failureRedirect</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://localhost:5173/error</span><span class="dl">"</span> <span class="p">}),</span>
+     <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+         <span class="nx">res</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:5173</span><span class="dl">"</span><span class="p">)</span>
+     <span class="p">},</span>
+ <span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Passport serializes <code class="language-plaintext highlighter-rouge">profile</code> then adds the serialized <code class="language-plaintext highlighter-rouge">profile</code> to the request object and calls the next middleware function. Then the app creates the encrypted profile info cookie with a <code class="language-plaintext highlighter-rouge">maxAge</code> of 1 day. The cookie is added to the response object, via the <code class="language-plaintext highlighter-rouge">Set-Cookie</code> HTTP response header. Finally, the app redirects authenticated users to the files page. The browser receives the cookie and stores it for future authentication.</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">passport</span><span class="p">.</span><span class="nx">serializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">profile</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">profile</span><span class="p">)</span>
+ <span class="p">})</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cookieSession</span><span class="p">({</span>
+     <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">session</span><span class="dl">"</span><span class="p">,</span>
+     <span class="na">secret</span><span class="p">:</span> <span class="dl">"</span><span class="s2">secret</span><span class="dl">"</span><span class="p">,</span>
+     <span class="na">maxAge</span><span class="p">:</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="c1">// 24 hours</span>
+ <span class="p">}))</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>When authenticated users send subsequent requests to the app, the browser sends the stored profile cookie via the <code class="language-plaintext highlighter-rouge">Cookie</code> HTTP request header. The app then decrypts and deserializes the cookie to retrieve the profile info for authentication!</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nx">passport</span><span class="p">.</span><span class="nx">deserializeUser</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">profile</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">profile</span> <span class="k">as</span> <span class="nx">any</span><span class="p">)</span>
+ <span class="p">})</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="amazons-object-storage-service">Amazon’s Object Storage Service</h2>
+
+<p>Amazon S3 (Simple Storage Service) is a cloud-based object storage service that allows users to store and retrieve data from anywhere on the web. It provides scalable, secure, and highly available storage infrastructure for a variety of use cases. I integrate S3 for uploading, downloading, and deleting files on the app without worrying about the underlying infrastructure.</p>
+
+<p>Configuring and creating an S3 bucket is surprisingly simple. I use <a href="https://aws.amazon.com/sdk-for-javascript/">AWS SDK</a> to call AWS services using JavaScript APIs on my Node app. The app must obtain my AWS account credentials before it can access services through the API. In development, AWS SDK automatically loads these credentials from my shared credentials file on <code class="language-plaintext highlighter-rouge">C:\Users\USER_NAME\.aws\credentials</code>! In production, you would likely load your credentials from environment variables. Then I simply created an S3 bucket in my AWS Management Console.</p>
+
+<p>To access services through the JavaScript API, I first created an S3 service object through which I access a set of features provided by the underlying client class. Then, I set up the RESTful API endpoints for uploading, downloading, and deleting with Express. Here is an example of the upload endpoint. I specify the <code class="language-plaintext highlighter-rouge">Bucket</code>, <code class="language-plaintext highlighter-rouge">Key</code> the object key, and the <code class="language-plaintext highlighter-rouge">Body</code> the object data or file buffer in our case in the POST endpoint.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// server</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="dl">"</span><span class="s2">/files</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">...</span>
+  
+  <span class="k">await</span> <span class="nx">s3</span><span class="p">.</span><span class="nx">upload</span><span class="p">({</span>
+      <span class="na">Bucket</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">BUCKET_NAME</span> <span class="k">as</span> <span class="nx">string</span><span class="p">,</span>
+      <span class="na">Key</span><span class="p">:</span> <span class="nx">file</span><span class="p">?.</span><span class="nx">originalname</span> <span class="k">as</span> <span class="nx">string</span><span class="p">,</span>
+      <span class="na">Body</span><span class="p">:</span> <span class="nx">file</span><span class="p">?.</span><span class="nx">buffer</span><span class="p">,</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">promise</span><span class="p">()</span>
+  
+  <span class="p">...</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// client</span>
+<span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">http://localhost:5000/files</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">body</span><span class="p">:</span> <span class="nx">formData</span><span class="p">,</span>
+    <span class="na">credentials</span><span class="p">:</span> <span class="dl">"</span><span class="s2">include</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">multipart/form-data</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

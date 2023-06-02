@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2F8YN01J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NC2F8YN01J');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Minerva | Steven Li | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/guanhongl.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steven Li | Professional Portfolio">
+    <meta property="og:url" content="https://guanhongl.github.io/projects/minerva.html">
+    <meta property="og:title" content="Minerva | Steven Li | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/guanhongl.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Minerva | Steven Li | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Steven Li</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Minerva</h1>
+ <p><img class="img-fluid" src="../img/minerva/minerva-home-page.png" /></p>
+
+<p><a href="https://minerva.meteorapp.com/">Visit Website</a><br />
+<a href="https://github.com/guanhongl/minerva-matrp">Visit GitHub Repo</a><br />
+<a href="https://sites.google.com/view/hawaiihomeproject/about">Visit Clinic Website</a></p>
+
+<h2 id="what-is-hawaii-home-clinic">What is Hawaii H.O.M.E. Clinic?</h2>
+
+<p>Hawaii Homeless Outreach &amp; Medical Education (H.O.M.E.) Clinic is a mobile clinic that sees patients at various sites around the island. The mission is to improve access to health care for the houseless while understanding their healthcare needs.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>The clinic used Athenahealth Electronic Health Record (EHR) to document ordered drugs and vaccines at the end of an encounter and a Google Forms &amp; Sheets system to log and deduct drugs and vaccines from the master inventory. Manually entering information proved to be a pain point; the process was slow and the supply was inaccurate. It was difficult for the business to manage their supply. <strong>The clinic needed an inventory management system!</strong></p>
+
+<p>The problem was introduced to me during my Software Engineering II course. My team of 8 worked in short sprints with regular communication and using GitHub Project Boards and Issues for agile project management. The app was largely incomplete by the course end, thus, I volunteered to continue and push it to production.</p>
+
+<h2 id="saving-time-saving-resources">Saving Time, Saving Resources</h2>
+
+<p>The proposed solution was to replace the Google Forms &amp; Sheets system with an inventory management app that applies QR codes to each batch of drugs and vaccines. A QR code links to an item’s lot number which uniquely identifies the batch of product produced by a manufacturer. Scanning a QR code opens the item’s information page. And on the page are links to the add and dispense forms auto-populated with the item’s information. Once complete, a log of the transaction is stored and the master inventory is updated. The improved business process provides physicians with numerous benefits.</p>
+
+<ul>
+  <li>They save time by not having to manually enter information</li>
+  <li>Inventory quantities are accurate due to QR code and database integrity</li>
+  <li>They can easily access inventory and log information via searches and filters</li>
+  <li>They are notified when supply is low or nearing expiration in real-time</li>
+</ul>
+
+<p>The app is built with Meteor, a full-stack JavaScript framework that bundles React, MongoDB, and Node.js, and hosted with Meteor Cloud.</p>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <img src="../img/minerva/minerva-qr-code.png" class="img-fluid" />
+    </div>
+    <div class="col">
+      <img src="../img/minerva/minerva-log-page.png" class="img-fluid" />
+    </div>
+  </div>
+</div>
+
+<h2 id="integrating-athenahealth-apis">Integrating Athenahealth APIs</h2>
+
+<p>Athenahealth EHR continued to document ordered, administered or dispensed, drugs and vaccines for patients at the end of an encounter. To further save time, I proposed a pipeline to fetch ordered drug and vaccine information for the day to sync to the database; ordered drug and vaccine quantities are auto deducted from the master inventory at night. I coordinated with the EHR vendor to gain API access and design the data pipeline. Using Athenahealth’s <a href="https://docs.athenahealth.com/api/guides/changed-data-subscriptions">Changed Data Subscriptions</a> the app can subscribe to the changed orders feed and fetch the created orders for the day.</p>
+
+<ul>
+  <li>Drugs and vaccines administered or dispensed on Athenahealth are auto deducted from the app’s inventory</li>
+  <li>They save time by not having to dispense on the app</li>
+  <li>No personal identifiable information is stored on the app</li>
+</ul>
+
+<h2 id="results">Results</h2>
+
+<p>Due to the new app, the required effort for adding and dispensing supply was reduced. Managing supply was easier, as inventory and log information was structured, which meant happier physicians.</p>
+
+<p>I learned to adapt my solution to the client’s request. Understanding the client’s business process is crucial! I often had to clarify details and rework solutions as new information arrived. What I found most helpful was visiting the clinic and chatting in person.</p>
+
+<h2 id="more-on-meteor">More on Meteor</h2>
+
+<p>Minerva was my deep dive into the Meteor framework. An aspect of Meteor I found brilliant was it does not use the request response cycle for client server interaction! Instead, on client connection a Minimongo instance is created; Minimongo is an in-memory, in-browser implementation of Mongo. Then, the Distributed Data Protocol (DDP) propagates data changes between the server and client databases.</p>
+
+<ul>
+  <li>Minimongo serves as a local cache that stores a subset of the database, saving server round trips and providing real-time UX</li>
+  <li>The server publishes subsets of the database and the client subscribes to subsets of the database, defining what data changes to propagate</li>
+  <li>DDP is the transport</li>
+</ul>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

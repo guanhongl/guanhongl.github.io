@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2F8YN01J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NC2F8YN01J');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="EZ Solutions to Your Problems! | Steven Li | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/guanhongl.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steven Li | Professional Portfolio">
+    <meta property="og:url" content="https://guanhongl.github.io/essays/ez-solutions.html">
+    <meta property="og:title" content="EZ Solutions to Your Problems! | Steven Li | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/guanhongl.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>EZ Solutions to Your Problems! | Steven Li | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Steven Li</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">EZ Solutions to Your Problems!</h1>
+  <span class="date">02 Dec 2020</span>
+  <hr>
+  <h2 id="the-assembly-line-of-programming">The Assembly Line of Programming</h2>
+
+<p>Imagine that you are a software engineer and you encounter a problem regarding coding structure or implementing an efficient user interface separate from the internals of your system. What if there were templates made by brilliant computer scientists that you could readily use to solve such problems? This is what design patterns are! They are formal ways and best practices for solving recurring problems in software design. I find design patterns similar to the manufacturing of cars. All cars go through the assembly line in which different parts are logically and methodically assembled to ramp up production. Much like the assembly line, design patterns are universal solutions and templates used in software design.</p>
+
+<h2 id="untangling-code">Untangling Code</h2>
+
+<p>I recall my early days in computer science where entire programs were defined and written in a single class. Some refer to them as ‘God classes’: classes that do everything and are often hundreds of thousands of lines of code. Such classes are a tangled mess of code; they lack structure, cleanliness, and formality. However, design patterns offer ways to manage the complexity and structure of your code. For example, one might use the Factory design pattern to return objects of different classes without exposing its creation logic. One might also use the Model View Controller (MVC) design pattern to organize code in a way that separates the model from the ui.</p>
+
+<h2 id="already-in-use">Already in Use?</h2>
+
+<p>You may already be unknowingly using design patterns in your code seeing as how they are best practices. I didn’t recognize the design patterns I’d been using in my code until recently. Meteor inherently utilizes the Publish-Subscribe design pattern through its pub-subs. In my final project, I’m able to decide what data the server publishes and which clients subscribe to which publishers. For example, in the profiles collection, I may publish only the profile specific to the user. There is also the Singleton design pattern which makes it so there is only a single instance of a class. <code class="language-plaintext highlighter-rouge">Profiles</code> may be the single instance of the profiles collection class where the profiles collection can only be modified by methods called on <code class="language-plaintext highlighter-rouge">Profiles</code>. However, the design pattern I view as the most useful in web design is the MVC. The model contains the database, the view contains the ui, and the controller mediates between the model and the view. This enables programmers to divide their program into three separate parts. In Meteor, we use MongoDB (M), React (V), and Meteor (C). The MVC enables three different groups to work on the same program without stepping over another. Design patterns add uniformity to programs; they organize code in ways that are easy to understand and reuse.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

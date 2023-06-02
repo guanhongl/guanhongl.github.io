@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NC2F8YN01J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NC2F8YN01J');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="HELP! My Question Doesn't Work | Steven Li | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/guanhongl.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steven Li | Professional Portfolio">
+    <meta property="og:url" content="https://guanhongl.github.io/essays/help-my-question.html">
+    <meta property="og:title" content="HELP! My Question Doesn't Work | Steven Li | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/guanhongl.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>HELP! My Question Doesn't Work | Steven Li | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Steven Li</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">HELP! My Question Doesn't Work</h1>
+  <span class="date">10 Sep 2020</span>
+  <hr>
+  <h2 id="the-age-of-questioning">The Age of Questioning</h2>
+
+<p>In an ever developing era of technology, the amount of information and knowledge we possess is rapidly expanding and evolving. With so much new information, it becomes increasingly difficult to retain. No one is omniscient which is why it is necessary to ask others for help. In present times, question asking is an essential skill, especially for software engineers who often specialize in many fields. It’s O.K. to ask for help, but the manner in which you ask matters; there’s smart and stupid ways to ask.</p>
+
+<h2 id="smart-vs-dumb">Smart vs Dumb</h2>
+
+<h4 id="smart-questions">Smart Questions</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Q: What does "Memory allocated at compile time" really mean?
+
+In programming languages like C and C++, people often refer to static and dynamic memory 
+allocation. I understand the concept but the phrase "All memory was allocated (reserved) during 
+compile time" always confuses me.
+
+Compilation, as I understand it, converts high level C/C++ code to machine language and outputs 
+an executable file. How is memory "allocated" in a compiled file ? Isn't memory always allocated in 
+the RAM with all the virtual memory management stuff?
+
+Isn't memory allocation by definition a runtime concept?
+
+If I make a 1KB statically allocated variable in my C/C++ code, will that increase the size of the 
+executable by the same amount?
+
+This is one of the pages where the phrase is used under the heading "Static allocation"...
+</code></pre></div></div>
+
+<p><a href="https://stackoverflow.com/questions/21350478/what-does-memory-allocated-at-compile-time-really-mean">Smart questions</a> start with refined subject headers. A well-thought and concise header attracts readers and provides them with the main point of your question. The header here clearly asks about memory allocation at compile time. Next, smart questions should provide background and show proof of individual research. The user opens with background information about static and dynamic memory allocation. They then demonstrate their understanding so far based on what research they’ve done. This also displays their desire to understand and not just for the answer. In return for asking a smart question, the user receives a well-constructed answer: they clearly explain what memory allocation at compile time is and provide detailed examples.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A: Memory allocated at compile-time means the compiler resolves at compile-time where certain 
+things will be allocated inside the process memory map.
+
+For example, consider a global array:
+
+int array[100];
+
+The compiler knows at compile-time the size of the array and the size of an int, so it knows the 
+entire size of the array at compile-time. Also a global variable has static storage duration by default: 
+it is allocated in the static memory area of the process memory space (.data/.bss section). Given 
+that information, the compiler decides during compilation in what address of that static 
+memory area the array will be...
+</code></pre></div></div>
+
+<h4 id="dumb-questions">Dumb Questions</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Q: Scanf is not working in C
+
+I am trying to work out why the second scanf is not working for me. Here is the code:
+
+#include &lt;stdio.h&gt;
+int main() {
+    char n;int p;
+    printf("Enter the number: ");
+    scanf("%d",&amp;p);
+    if(p==1) {
+        printf("Enter a character: ");
+        scanf("%c",&amp;n);
+    }
+}
+
+In this program the second scanf("%c",&amp;n) is not working. What am I doing wrong? The output of above program is:
+
+Enter a number: 1
+Enter a charter: 
+
+It is coming out of compiler.
+</code></pre></div></div>
+
+<p><a href="https://stackoverflow.com/questions/34049463/scanf-is-not-working-in-c">Dumb questions</a>, however, demonstrate a lack of intelligence. The first thing one may notice is the uninspiring header, “Scanf is not working in C”. Vague questions like these leave the reader asking more questions and are often time sinks. The user pastes some lines of code that they expect others to analyze. They provide no other useful information and contribute nothing to the problem-solving process. Also, they lazily exhibit a lack of research as this is a common C question that can easily be Googled. The user clearly desires the answer rather than understanding. As a result, they are given short answers that state the property of scanf(), pulled directly from the manual.</p>
+
+<h2 id="be-smarter-today">Be Smarter Today</h2>
+
+<p>As an avid Googler of questions, I now know what constitutes a smart question. When asking a question online, you should strive to become active participants in problem-solving. This includes doing your research and asking concisely. Furthermore, you shouldn’t seek the convenience of an answer. Instead, phrase your question in a way that warrants understanding. Smart questions benefit both you and the reader! For aspiring software engineers like myself, asking smart questions will greatly improve productivity in our work environments.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
